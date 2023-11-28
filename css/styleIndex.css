@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.swiper-slide-demo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 60%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  .centered2 {
+    position: absolute;
+    top: 30%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+.info{
+    position: absolute;
+    margin-top: 350px;
+    color: #fff;
+    font-size:25px;
+    margin-left: 250px;
+    padding-top: -500px;
+    text-align: justify;
+    transform: translate(-50%, -50%);
+}
+
+  .swiper-button-prev{
+      color: #fff;
+  }
+  .swiper-button-next{
+      color: #fff;
+  }
+
+  .mypadding{
+      padding-top: 100px;
+      padding-bottom: 100px;
+  }
+
+  .btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 5px;
+    background: #a945c7;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon:hover{
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 0.3s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#a945c7);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#a945c7);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#a945c7);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#a945c7);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+
+
+/* Si la imagen brilla mucho y solo muevan la ultima propiedad del background banda, a mas o menos de .4 */
+.logo{
+    margin-left: 700px;
+    margin-top: 450px;
+    padding-top: 100px;
+    width: 850px;
+    height: 550px;
+}
+.overlay{
+    position: absolute;
+    top: -15px;
+    left: 0;
+  
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    z-index: 100;    /* arriba de todas las capas (top)*/
+}
+
+nav header{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav header h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+nav header h2 span{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 5px 0 40px;
+    cursor: pointer;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+}
+
+
+nav ul li a.active{
+    color: #fff;
+    border-color: #fff;
+    position: relative;
+}
+
+nav ul li a:hover{
+    color: rgb(233, 93, 0);
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:last-child a{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding: 0px 0px;
+}
+
+nav ul li:last-child a:hover{
+    border: 1px solid #fff;
+}
+
+nav .toggleMenu{
+    display: none;
+}
+
+nav .toggleMenu i{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+
+/* Mobile screen */
+@media screen and (max-width : 500px){
+    .background{
+        left: 0;
+    }
+
+    .overlay{
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .contentBox{
+        width: 100%;
+        padding: 20px;
+        margin-top: 32%;
+    }
+
+    .contentBox h3{
+        font-size: 2rem;
+    }
+
+    nav ul{
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        /* background: rgba(255, 255, 255, 0.6); */
+        height: 250px;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        transform: translateY(-350px);
+        z-index: 101;
+    }
+
+    nav ul.active{
+        transform: translateY(0px);
+    }
+
+    nav .toggleMenu{
+        display: block;
+    }
+}
+

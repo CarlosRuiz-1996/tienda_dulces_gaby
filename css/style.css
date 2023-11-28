@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  
+}
+.wrapper,
+.slide {
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.slide .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slide .image-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.image-data span.text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.image-data h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+a.button:hover {
+  color: #fff;
+  background-color: #c87e4f;
+}
+
+/* swiper button css */
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-prev {
+  left: 50px;
+}
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #c87e4f;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+}
+
+.btn-wsp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover{
+  background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .btn-wsp{
+      width:63px;
+      height:63px;
+      line-height: 66px;
+}
+}
+
+/* Si la imagen brilla mucho y solo muevan la ultima propiedad del background banda, a mas o menos de .4 */
+.logo{
+    margin-left: 100px;
+    margin-top: 60px;
+    width: 250px;
+    height: 125px;
+}
+.overlay{
+    position: absolute;
+    top: -15px;
+    left: 0;
+   /** background: rgba(0, 0, 0, 0.2); **/
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    z-index: 100;    /* arriba de todas las capas (top)*/
+}
+
+nav header{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav header h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+nav header h2 span{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 5px 0 40px;
+    cursor: pointer;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+}
+
+
+nav ul li a.active{
+    color: #fff;
+    border-color: #fff;
+    position: relative;
+}
+
+nav ul li a:hover{
+    color: rgb(233, 93, 0);
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:last-child a{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding: 0px 0px;
+}
+
+nav ul li:last-child a:hover{
+    border: 1px solid #fff;
+}
+
+nav .toggleMenu{
+    display: none;
+}
+
+nav .toggleMenu i{
+    font-size: 24px;
+    font-weight: 800;
+}
+nav.sticky{
+  padding: 5px 100px;
+  background: #000;
+}
+
+
+
+/* Mobile screen */
+@media screen and (max-width : 500px){
+    .background{
+        left: 0;
+    }
+
+    .overlay{
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .contentBox{
+        width: 100%;
+        padding: 20px;
+        margin-top: 32%;
+    }
+
+    .contentBox h3{
+        font-size: 2rem;
+    }
+
+    nav ul{
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        /* background: rgba(255, 255, 255, 0.6); */
+        height: 250px;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        transform: translateY(-350px);
+        z-index: 101;
+    }
+
+    nav ul.active{
+        transform: translateY(0px);
+    }
+
+    nav .toggleMenu{
+        display: block;
+    }
+}
+
+.infosomos .circulo1{
+  width: 200px;
+  height: 200px;
+ position: relative;
+ 
+}
+.infosomos h2{
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.infosomos p{
+  font-size: 25px;
+  text-align: justify;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
